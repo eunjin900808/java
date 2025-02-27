@@ -5,6 +5,8 @@ import java.io.FileReader;
 import java.util.Scanner;
 
 public class StudentAdmin1 {
+	
+	// 멤버변수, 클래스(전역)변수
 	public static String filePath = "C:\\mytemp\\student_info.txt";
 
 	public static void main(String[] args) {
@@ -16,6 +18,9 @@ public class StudentAdmin1 {
 //			1.박찬호
 //			1.김희선
 		System.out.println("메뉴2].학생점수(이름+점수)");
+//			1.홍길동씨(66)
+//			2.박찬호(98)
+//			3.김희선(82)
 		System.out.print("*메뉴번호>> ");
 
 		int menu = 0;
@@ -41,9 +46,10 @@ public class StudentAdmin1 {
 			FileReader file = new FileReader(filePath);
 			BufferedReader buffer = new BufferedReader(file);
 			int rownumber = 0;
-			while(true) {
+			while(true) {	//무한루프
 				String str = buffer.readLine();	//한 줄을 읽어들임
 				if(str == null) break;
+				
 				rownumber++;
 				String[] array = str.split(":");
 				System.out.println(rownumber+"."+array[0]);
