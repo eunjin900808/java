@@ -25,7 +25,7 @@ public class DirList1 {
 			}
 			String name = names[i].getName();
 			int len = (int)names[i].length();	//byte
-			long unix = names[i].lastModified();
+			long unix = names[i].lastModified(); //유닉스
 			String date = df.format(unix);
 			int len2 = len/1024;	//KByte 단위로 전환
 			

@@ -38,8 +38,8 @@ public class FileReaderExample {
 		String filename = scn.next();
 		String filePath = dirPath+"\\"+filename;
 		try {
-			FileReader file = new FileReader(filePath);
-			BufferedReader buffer = new BufferedReader(file);
+			FileReader file = new FileReader(filePath); //경로의 인스턴스처리 -> 메모리
+			BufferedReader buffer = new BufferedReader(file); //readLine() 메소드 ->텍스트성 파일(이미지 x 클래스 x)
 			
 			while(true) {
 				String str = buffer.readLine();	//한 줄을 읽어들임
