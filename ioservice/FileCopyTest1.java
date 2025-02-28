@@ -12,12 +12,12 @@ public class FileCopyTest1 {
 		String filePath2 = "c:/mytemp/post1 (1).txt.bak";
 		
 		//filePath1 읽어들임/출력
-		//출력 내부에 write() 기능을 넣음
 
 		FileReader file = new FileReader(filePath1);
 		BufferedReader buffer = new BufferedReader(file);
 		
 		FileWriter fw = new FileWriter(filePath2,true);
+		//출력 내부에 write() 기능을 넣음
 		while(true) {
 			String str = buffer.readLine();
 			if(str == null) break;
