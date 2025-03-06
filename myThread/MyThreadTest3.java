@@ -15,7 +15,8 @@ public class MyThreadTest3 extends Thread{
 	public static void main(String[] args) {
 		
 		MyThreadTest3 my3 = new MyThreadTest3();
-		my3.start();
+		my3.start(); //멀티 스레드 - start 메소드 이름으로 가능하지만 멀티의미는깨짐
+//		my3.run(); 	//순차적
 		for(int i = 1; i<5; i++) {
 			System.out.println("꿀떡" + i + "개 먹고");
 			try {
